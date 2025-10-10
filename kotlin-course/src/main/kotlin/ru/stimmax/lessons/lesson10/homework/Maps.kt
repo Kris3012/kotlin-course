@@ -28,6 +28,14 @@ fun main(){
     animals.remove("Ёж")
 
 // 7. Создайте словарь (ключи Double, значения Int) и выведи в цикле результат деления ключа на значение. Не забудь обработать деление на 0 (в этом случае выведи слово “бесконечность”)
+    val task7 = mutableMapOf<Double, Int>(1.1 to 1, 2.2 to 2)
+    for((double, integer) in task7){
+        if (integer == 0)
+            println("бесконечность")
+    else
+        println(double/integer)
+    }
+
 // 8. Измените значение для существующего ключа в изменяемом словаре.
     animals["Лиса"] = "Белка"
 
@@ -42,13 +50,10 @@ fun main(){
     library ["Эдгар Алан По"]= mutableListOf<String>("Падение Дома Ашеров", "Ворон")
 
 // 2. Справочник растений: Ключи - типы растений (например, "Цветы", "Деревья"), значения - списки названий растений
-    val plants = mutableMapOf<String, MutableList<String>>()
-    plants["Цветы"] = mutableListOf<String>("Розы","Гвоздики")
-    plants["Деревья"] = mutableListOf<String>("Дуб","Кипарис")
+    val plants = mapOf<String, MutableList<String>>()
 
 // 3. Четвертьфинала: Ключи - названия спортивных команд, значения - списки игроков каждой команды
-    val quarterFinal = mutableMapOf<String, MutableList<String>>()
-    quarterFinal["Арсенал"] = mutableListOf<String>("Игрок такой-то", "Игрок сякой-то")
+    val quarterFinal = mapOf<String, MutableList<String>>()
 
 // 4. Курс лечения: Ключи - даты, значения - список препаратов принимаемых в дату
     val treatment = mapOf(
@@ -56,10 +61,8 @@ fun main(){
         "02 ноября" to listOf("Лекарство2")
     )
 
-
 // 5. Словарь путешественника: Ключи - страны, значения - словари из городов со списком интересных мест.
-    val travel = mutableMapOf<String, MutableMap<String, String>>()
-    travel ["Япония"] = mutableMapOf("Осака" to "парк StudioUniversal")
-    travel ["Япония"] ?.put("Киото", "храм Фушими Инари")
+    val travel = mutableMapOf<String, MutableMap<String, List<String>>>()
+    travel ["Япония"] = mutableMapOf("Осака" to listOf("парк StudioUniversal", "fgfh"))
 
 }
