@@ -21,11 +21,7 @@ package ru.stimmax.lessons.lesson17.homework
             }
         protected var protectedField = "5. измени меня из функции main() через сеттер в наследнике"
         private var privateField = "6. добавь сеттер чтобы изменить меня из main()"
-
-        //п. 6
-        fun setPrivateField(newValue: String) {
-            privateField = newValue
-        }
+        //п. 6 не получится сделать, т.к. у privateField модификатор private
 
         fun getAll(): String {
             return mapOf(
@@ -118,10 +114,6 @@ fun main() {
 
     //Проверим п.5
     child.updateProtectedField("Новое значение")
-    println(child.getAll())
-
-    //Проверим п.6
-    child.setPrivateField("New value")
     println(child.getAll())
 
     //Проверим п.7
