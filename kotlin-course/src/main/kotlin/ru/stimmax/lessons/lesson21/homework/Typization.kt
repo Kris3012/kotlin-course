@@ -61,15 +61,7 @@ fun Any.toSquare(): Double {
 //Все остальные типы должны быть проигнорированы.
 
 fun sumIntOrDoubleValues(elementsList: List<Any>): Double {
-    var counter = 0.0
-    for (element in elementsList) {
-        when (element) {
-            is Int -> counter += element.toDouble()  // привели к одному типу
-            is Double -> counter += element
-            else -> println("Это не те дроиды, которых вы ищите")
-        }
-    }
-    return counter
+    return elementsList.filter { it is Int || it is Double }.sumOf { (it as Number).toDouble() }
 }
 
 //Задача 6
@@ -88,5 +80,7 @@ fun tryCastToListAndPrint(param4: Any) {
     } else {
         println("Ошибка: это не список")
     }
+
+    // но лучше написать код не через if и циклы, а через приведение типов, как в Задаче 5
 }
 
