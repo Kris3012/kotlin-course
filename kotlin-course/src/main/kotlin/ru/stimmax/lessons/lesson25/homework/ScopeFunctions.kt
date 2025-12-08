@@ -91,7 +91,15 @@ val personEx = Person("Имя", 25)
     //Создайте функцию toEmployee, которая расширяет класс Person, который может быть null.
     // В функции используйте функцию let для создания Employee, только если объект Person не null.
     // В противном случае возвращается null
-        // пока не успела
+    fun Person?.toEmployee(): Employee? {
+    return this?.let {
+        Employee(it.name, it.age,"Должность2")
+    }
+    }
 
+    // Person? — объект может быть null
+    // this?.let { ... } — блок выполняется только если объект не null
+    // it.name и it.age — доступ к полям Person внутри let
+    // Возвращается Employee, или null, если Person был null
 }
 
