@@ -1,0 +1,50 @@
+{
+  "name": "Grace",
+  "isEmployed": true,
+  "dateOfBirth": "1985-04-04",
+  "jobTitle": "CTO",
+  "employees": [
+    {
+      "name": "Alex",
+      "isEmployed": true,
+      "dateOfBirth": "1988-01-18",
+      "jobTitle": "PM",
+      "employees": [
+        {
+          "name": "Carol",
+          "isEmployed": true,
+          "dateOfBirth": "1990-05-10",
+          "jobTitle": "TEAM_LEAD",
+          "employees": [
+            {
+              "name": "Alice",
+              "isEmployed": true,
+              "dateOfBirth": "1996-03-12",
+              "jobTitle": "FRONTEND_DEV"
+            }
+          ]
+        },
+        {
+          "name": "Dave",
+          "isEmployed": true,
+          "dateOfBirth": "1989-11-02",
+          "jobTitle": "TEAM_LEAD",
+          "employees": [
+            {
+              "name": "Bob",
+              "isEmployed": true,
+              "dateOfBirth": "1994-07-21",
+              "jobTitle": "BACKEND_DEV"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Frank",
+      "isEmployed": true,
+      "dateOfBirth": "1992-09-30",
+      "jobTitle": "CRM"
+    }
+  ]
+}
